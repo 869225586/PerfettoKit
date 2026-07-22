@@ -74,7 +74,7 @@ App 模块添加依赖：
 
 ```kotlin
 dependencies {
-    implementation("com.github.yeyu-lab:PerfettoKit:1.0.0")
+    implementation("com.github.yeyu-lab:PerfettoKit:1.1.0")
 }
 ```
 
@@ -363,6 +363,35 @@ class SampleAdapter : RecyclerView.Adapter<SampleAdapter.ViewHolder>() {
 
 ---
 
-## 📄 License
+## � 更新日志
+
+### v1.1.0 (2026-07-22)
+
+**新增**
+- ✨ `MethodTracer`：全局方法插桩入口（inline `trace(tag){}` 或 `begin/end`），自动归集到活跃 session
+- 📊 图表可视化工具集成（`tools/gfxinfo`），Swift App + Python 脚本支持
+- 🌐 i18n：Issue 描述与建议按 locale 输出（中/英）
+
+**改进**
+- ♻️ 性能分析管线重构，帧归因更精确
+- 🔧 栈采样 `isAppFrame` 只排除 SDK 自身，保留 sample app 代码可见
+- 🤖 自动采集稳定性提升，修复 MethodTracer 重复记录
+- 🔒 sample 示例中本地 AI endpoint IP 脱敏
+
+**文档**
+- 📝 移除冗余的 `project-introduction.md`（与 README 重复）
+
+### v1.0.0 (2026-05)
+
+首次发布：
+- 🎉 9 维采集：帧率 / CPU / 内存 / 线程 / 网络 / IO / Bitmap / 分配 / Looper 慢消息
+- 🧠 内置 5 套规则引擎 + 10 条 YAML 卡顿模式 Skill 库
+- 🤖 LLM 智能诊断（OpenAI 兼容协议，支持 GPT / Claude / Ollama / LM Studio / DeepSeek）
+- 🔍 自动场景检测（Activity 启动 / 列表滑动）+ 历史回归检测
+- 📦 JitPack 发布支持
+
+---
+
+## �📄 License
 
 [Apache License 2.0](LICENSE)

@@ -31,7 +31,7 @@ afterEvaluate {
 
                 groupId = "com.github.yeyu-lab"
                 artifactId = "PerfettoKit"
-                version = findProperty("VERSION_NAME")?.toString() ?: "1.0.0"
+                version = findProperty("VERSION_NAME")?.toString() ?: "1.1.0"
 
                 pom {
                     name.set("PerfettoKit")

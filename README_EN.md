@@ -74,7 +74,7 @@ Add the dependency to your app module:
 
 ```kotlin
 dependencies {
-    implementation("com.github.yeyu-lab:PerfettoKit:1.0.0")
+    implementation("com.github.yeyu-lab:PerfettoKit:1.1.0")
 }
 ```
 
@@ -362,6 +362,35 @@ class SampleAdapter : RecyclerView.Adapter<SampleAdapter.ViewHolder>() {
 
 ---
 
-## 📄 License
+## � Changelog
+
+### v1.1.0 (2026-07-22)
+
+**Added**
+- ✨ `MethodTracer`: global method instrumentation entry (inline `trace(tag){}` or `begin/end`), auto-attached to the active session
+- 📊 Chart visualization tooling (`tools/gfxinfo`) with Swift app + Python script
+- 🌐 i18n: issue message & suggestion output localized (zh / en)
+
+**Changed**
+- ♻️ Refactored performance analysis pipeline for more accurate frame attribution
+- 🔧 Stack-sampling `isAppFrame` now only excludes SDK itself; sample app code stays visible
+- 🤖 Auto-collect stability improvements; fixed duplicate MethodTracer records
+- 🔒 Masked local IP in sample AI endpoint config
+
+**Docs**
+- 📝 Removed redundant `project-introduction.md` (duplicated with README)
+
+### v1.0.0 (2026-05)
+
+Initial release:
+- 🎉 9-dimensional collection: Frame / CPU / Memory / Thread / Network / IO / Bitmap / Allocation / Looper slow messages
+- 🧠 5 built-in rule sets + 10 YAML jank pattern skills
+- 🤖 LLM diagnosis (OpenAI-compatible: GPT / Claude / Ollama / LM Studio / DeepSeek)
+- 🔍 Auto scene detection (activity launch / list scroll) + historical regression detection
+- 📦 JitPack publish support
+
+---
+
+## �📄 License
 
 [Apache License 2.0](LICENSE)
